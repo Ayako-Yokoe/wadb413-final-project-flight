@@ -1,4 +1,3 @@
 const mongoose = require('mongoose')
-const url = process.env.MONGO_DB_CONNECTION
-const connect = mongoose.connect(url)
+const connect = mongoose.connect(process.env.MONGO_DB_CONNECTION)
 connect.then(() => console.log('connected to db')).catch((err) => console.log(err))
