@@ -69,7 +69,8 @@ const Register = () => {
       setIsSubmitting(true)
       setError('')
       
-      fetch(process.env.REACT_APP_API_ENDPOINT + 'api/v1/auth/signup', {
+      // fetch(process.env.REACT_APP_API_ENDPOINT + '/api/v1/auth/signup', {
+      fetch('/api/v1/auth/signup', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, password }),

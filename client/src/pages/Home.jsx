@@ -128,7 +128,7 @@ const Home = () => {
     }
 
     const logoutHandler = () => {
-      fetch(process.env.REACT_APP_API_ENDPOINT + 'api/v1/auth/logout', {
+      fetch('/api/v1/auth/logout', {
         method: 'POST',
           headers: { "Content-Type": "application/json" },
           credentials: "include"

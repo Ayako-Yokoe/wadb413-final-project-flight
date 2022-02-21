@@ -71,7 +71,8 @@ const Login = () => {
       setIsSubmitting(true)
       setError('')
 
-      fetch(process.env.REACT_APP_API_ENDPOINT + 'api/v1/auth/signin', {
+      // fetch(process.env.REACT_APP_API_ENDPOINT + 'api/v1/auth/signin', {
+      fetch('/api/v1/auth/signin', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
