@@ -12,6 +12,10 @@ app.use(express.json())
 
 app.use('/api/v1', require('./routes/index'))
 
+app.get('/', (req, res, next) => {
+    res.status(200).json({ status: 'success' });
+});
+
 app.use((error, req,res,next) => {
     res.status(500).json({ error: error.message })
 })
